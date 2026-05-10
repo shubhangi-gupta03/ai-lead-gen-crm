@@ -1,6 +1,6 @@
 # AI Lead Generation CRM
 
-Production-grade AI-powered Lead Generation CRM built with React + Vite (frontend) and Node.js + Express (backend), with Google Gemini-driven lead enrichment, prospect summarization, and personalized cold email generation.
+Production-grade AI-powered Lead Generation CRM built with React + Vite (frontend) and Node.js + Express (backend), with GROQ API KEY-driven lead enrichment, prospect summarization, and personalized cold email generation.
 
 ## Core Features
 
@@ -38,7 +38,7 @@ Kanban CRM Dashboard
 - Drag & Drop: `@hello-pangea/dnd`
 - CSV Parsing: PapaParse
 - Notifications: `react-hot-toast`
-- AI: Google Gemini (`gemini-1.5-flash`) via `@google/generative-ai`
+- AI: GROQ_API_KEY
 - Backend: Node.js + Express
 - Deployment: Vercel-ready (`vercel.json`)
 
@@ -82,7 +82,7 @@ cd ../client && npm install
 Copy `.env.example` into `.env` in the project root (or apply same values in server runtime env):
 
 ```env
-GEMINI_API_KEY=your_gemini_key_here
+GROQ_API_KEY=groq_api_key
 PORT=3001
 CLIENT_URL=http://localhost:5173
 VITE_API_BASE_URL=
@@ -106,13 +106,18 @@ npm run dev
 
 Frontend runs at `http://localhost:5173`, backend at `http://localhost:3001`.
 
-## Free Gemini API Key (Google AI Studio)
+## Free Groq API Key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/).
-2. Sign in with your Google account.
-3. Open API Keys section and create a new key.
-4. Copy key into `GEMINI_API_KEY` in your `.env`.
+1. Go to https://console.groq.com/
+2. Sign in or create a Groq account.
+3. Open the API Keys section.
+4. Click "Create API Key".
+5. Copy the generated API key.
+6. Paste it into `GROQ_API_KEY` inside your `.env` file.
 
+Example:
+
+GROQ_API_KEY=your_groq_api_key_here
 ## Sample CSV Format
 
 Use this header:
@@ -143,7 +148,7 @@ Example file is provided at `sample_leads.csv`.
 1. Push repository to GitHub.
 2. Import project in Vercel.
 3. Set environment variables in Vercel project settings:
-   - `GEMINI_API_KEY`
+   - `GROQ_API_KEY`
    - `PORT` (optional, defaults to platform runtime)
    - `CLIENT_URL` (your deployed client URL)
    - `VITE_API_BASE_URL` (empty for same-origin API)
@@ -154,5 +159,13 @@ Example file is provided at `sample_leads.csv`.
 
 ## Security Note
 
-`GEMINI_API_KEY` is used only on the Express backend. No Gemini key is exposed in client-side code.
+`GROQ_API_KEY` is used only on the Express backend. No Gemini key is exposed in client-side code.
+##Steps to run
+1.cd "/Users/Desktop/ai-lead-gen-crm/server"
+npm run dev
+open another terminal
+2.cd "/Users/Desktop/ai-lead-gen-crm/client"
+npm install
+npm run build
+npm run dev
 # ai-lead-gen-crm

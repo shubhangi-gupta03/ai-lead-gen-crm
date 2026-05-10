@@ -160,12 +160,15 @@ Example file is provided at `sample_leads.csv`.
 ## Security Note
 
 `GROQ_API_KEY` is used only on the Express backend. No Gemini key is exposed in client-side code.
+
 ##Steps to run
-1.cd "/Users/Desktop/ai-lead-gen-crm/server"
-npm run dev
-open another terminal
-2.cd "/Users/Desktop/ai-lead-gen-crm/client"
-npm install
-npm run build
-npm run dev
+
+-1.cd "/Users/Desktop/ai-lead-gen-crm/server"
+-npm run dev
+-open another terminal
+-2.cd "/Users/Desktop/ai-lead-gen-crm/client"
+-npm install
+-npm run build
+-npm run dev
+
 # ai-lead-gen-crm
